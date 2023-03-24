@@ -22,6 +22,19 @@ public class Book {
      public void setYearBook(int yearBook){
         this.yearBook = yearBook;
      }
+    public String toString() {
+        return "Автор - " + this.author + " Книга - " + this.nameBook + " " + this.yearBook;
+
+    }
+    public boolean equals(Book other) {
+        if (this.nameBook.equals(other.nameBook) && this.yearBook == other.yearBook) {
+            return true;
+        }
+        return false;
+    }
+    public int hashCode() {
+        return java.util.Objects.hash(nameBook,yearBook);
+    }
 
 
 }
